@@ -9,8 +9,30 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/hero-bg.DNG" rel="icon">
- 
+<!--   <link href="assets/img/hero-bg.DNG" rel="icon"> -->
+   <title>🔥 Welcome to My Dev Portfolio 💻🔥</title>
+
+  <script>
+    // Original title
+    let originalTitle = "🔥 Welcome to My Dev Portfolio 💻🔥";
+    // When user leaves
+    let attentionTitle = "⚠️ Missing Developer: Time to Debug! 💻";
+    // When user comes back
+    let backTitle = "🖥️ Debugging Complete: Back to Work! 🔥";
+
+    window.onblur = function () {
+      document.title = attentionTitle;
+    };
+
+    window.onfocus = function () {
+      document.title = backTitle;
+
+      // After 3 seconds, switch back to the original
+      setTimeout(function() {
+        document.title = originalTitle;
+      }, 3000);
+    };
+  </script>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
